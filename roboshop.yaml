@@ -14,9 +14,10 @@
       region: "us-east-1"
       image_id: "{{ ami_id }}"
       security_groups: 
-      - roboshop-common
-      - roboshop-{{ item }}  
-loop: "{{ instances }}"
-when: action == "create"
+      - "roboshop-common"
+      - "roboshop-{{ item }}"
+        
+  loop: "{{ instances }}"
+  when: action == "create"
 
 
