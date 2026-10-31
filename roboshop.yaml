@@ -20,4 +20,12 @@
     loop: "{{ instances }}"
     when: action == "create"
 
+# To create R53 records we need private-ip address details 
+# we can get the details from ec2 creation output
+# so take the output and copy it into file
+
+  - name: print ec2 creation output
+    debug:
+      msg: "{{ ec2-output}}"
+
 
