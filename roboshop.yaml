@@ -16,7 +16,7 @@
       security_groups: 
       - roboshop-common
       - roboshop-{{ item }}  
-  loop: "{{ instances }}"
-  when: action == "create"
+loop: "{{ instances }}"
+when: action == "create"
 
 
