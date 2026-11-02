@@ -1,5 +1,5 @@
 - name: configure nodejs server
-  hosts: mysql
+  hosts: catalogue
   become: yes
   tasks:
   - name: enable nodejs:24
@@ -8,7 +8,7 @@
   - name: install nodejs
     package:
       name: nodejs
-      state: present
+      state: absent
   
   - name: create roboshop system user
     user:
@@ -33,5 +33,4 @@
     file: 
       path: /app
       state: directory
-  
   
