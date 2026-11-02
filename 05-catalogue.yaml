@@ -74,6 +74,14 @@
   - name: print product count 
     debug:
       msg: "{{ product_Count }}"
+
+  - name: load the products
+    shell: mongosh --host {{ mongodb_host }} </app/db/master-data.js
+    when: product_Count.stdout | int == 0
+
+  
+
+
   
    
 
