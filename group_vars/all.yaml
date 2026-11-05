@@ -8,7 +8,7 @@ catalogue_host: catalogue.devopsadipractice.online
 user_host: user.devopsadipractice.online
 cart_host: cart.devopsadipractice.online
 shipping_host: shipping.devopsadipractice.online
-payment_host: payment.devopsadipractice.
+payment_host: payment.devopsadipractice.online
 mysql_root_password: RoboShop@1
 shipping_db_user: shipping
 shipping_db_password: RoboShop@1
