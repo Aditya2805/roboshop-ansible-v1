@@ -69,7 +69,7 @@
       chdir: /app
   
   - name: check cities data exists or not
-    command: mysql -h " {{ mysql_host }}" -u root -p{{ mysql_root_password }} -N -B -e "SELECT COUNT(*) FROM cities.cities
+    command: mysql -h " {{ mysql_host }}" -u root -p{{ mysql_root_password }} -N -B -e "SELECT COUNT(*) FROM cities.cities;"
     register: cities_Count
 
   - name: print cities count
