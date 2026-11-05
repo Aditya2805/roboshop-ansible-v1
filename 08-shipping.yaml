@@ -9,8 +9,8 @@
     package:
       name: 
         - maven
-        - maven-openjdk25
         - java25-openjdk-devel
+        - maven-openjdk25 
         - mysql 
       state: present
 
