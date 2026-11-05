@@ -35,7 +35,7 @@
     file:
       path: " {{ item.path }}"
       state: absent
-    loop: " {{directory_Contents.file}}"
+    loop: " {{directory_contents.file}}"
 
   - name: download frontend application
     get_url:
@@ -58,5 +58,5 @@
       name: nginx
       state: restarted
   
-  
+
 
