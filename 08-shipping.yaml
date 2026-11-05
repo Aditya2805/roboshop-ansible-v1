@@ -8,6 +8,7 @@
   - name: install maven , java , mysql
     package:
       name: 
+        - maven
         - maven-openjdk25
         - java25-openjdk-devel
         - mysql 
