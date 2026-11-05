@@ -19,3 +19,20 @@
       state: restarted
       enabled: yes
 
+  - name: delete the contents in directory
+    find:
+      paths: /usr/share/nginx/html/
+      recurse: true
+      hidden: true
+      file_type: any
+    register: directory_contents
+  
+  - name: print directory contents
+    debug:
+      msg: "{{ directory_contents}}"
+  
+  - name: delete the discovered contents
+    file:
+      path: " {{ item.path }}"
+      state: absent
+    loop: " {{directory_Contents.file}}"
