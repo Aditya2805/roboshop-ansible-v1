@@ -33,7 +33,7 @@
   
   - name: delete the discovered contents
     file:
-      path: " {{ item.path }}"
+      path: "{{ item.path }}"
       state: absent
     loop: " {{ directory_contents.files }}"
 
