@@ -35,7 +35,7 @@
     file:
       path: "{{ item.path }}"
       state: absent
-    loop: " {{ directory_contents.files }}"
+    loop: "{{ directory_contents.files }}"
 
   - name: download frontend application
     get_url:
