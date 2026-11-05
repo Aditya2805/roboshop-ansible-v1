@@ -53,7 +53,7 @@
     command: mvn --version
     args:
       chdir: /app
-      register: mvn_default
+    register: mvn_default
   
   - name: print mvn version without JAVA_HOME
     debug:
