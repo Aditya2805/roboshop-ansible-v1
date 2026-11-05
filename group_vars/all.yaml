@@ -2,4 +2,11 @@ ansible_user: ec2-user
 ansible_password: DevOps321
 mongodb_host: mongodb.devopsadipractice.online
 redis_host: redis.devopsadipractice.online
+mysql_host: mysql.devopsadipractice.online
+rabbitmq_host: rabbitmq.devopsadipractice.online
 catalogue_host: catalogue.devopsadipractice.online
+user_host: user.devopsadipractice.online
+cart_host: cart.devopsadipractice.online
+shipping_host: shipping.devopsadipractice.online
+payment_host: payment.devopsadipractice.
+mysql_root_password: RoboShop@1

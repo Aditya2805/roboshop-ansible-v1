@@ -47,6 +47,34 @@
       src: /tmp/shipping.zip
       dest: /app
       remote_src: yes
+  
+  - name: mvn version without JAVA_HOME
+    command: mvn --version
+    args:
+      chdir: /app
+      register: mvn_default
+  
+  - name: print mvn version without JAVA_HOME
+    debug:
+      msg: " {{ mvn_default.stdout_lines }}"
+  
+  - name: install dependencies
+    command: mvn clean package
+    args: 
+      chdir: /app
+
+  - name: copy shipping.jar file from target 
+    command: mv target/shipping.jar shipping.jar
+    args:
+      chdir: /app
+  
+  - name: check cities data exists or not
+    command: mysql -h " {{ mysql_host }}" -u root -p{{ mysql_root_password }} -N -B -e "SELECT COUNT(*) FROM cities.cities
+    register: cities_Count
+
+  - name: print cities count
+    debug: 
+      msg: "{{ cities_count }}"
 
 
 
